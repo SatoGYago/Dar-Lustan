@@ -10,7 +10,9 @@ header
     width: 100vw;
     background-color: black;
     display: grid;
-    grid-template-columns: 10% 20% 10% 10% 10% 10%;
+    grid-template-columns: 1%, 20%, 1fr, 1fr, 1fr, 1fr;
+    
+    grid-template-areas: "logo textoLogo inicio cardapio pedidos userMenu";
         
     #logoImg
     {
@@ -34,7 +36,11 @@ header
     }
     #userMenu
     {
-
+        grid-area: userMenu;
     }
     
+}
+
+.divMenu {
+    border: solid red;
 }
