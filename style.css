@@ -1,0 +1,40 @@
+*
+{
+    border: 0;
+    margin: 0;
+}
+
+header 
+{
+    height: 15vh;
+    width: 100vw;
+    background-color: black;
+    display: grid;
+    grid-template-columns: 10% 20% 10% 10% 10% 10%;
+        
+    #logoImg
+    {
+        grid-area: logo;
+    }
+    #textoLogo
+    {
+        grid-area: textoLogo;
+    }
+    #menuInicio
+    {
+        grid-area: inicio;
+    }
+    #menuCardapio
+    {
+        grid-area: cardapio;
+    }
+    #menuPedidos
+    {
+        grid-area: pedidos;
+    }
+    #userMenu
+    {
+
+    }
+    
+}
