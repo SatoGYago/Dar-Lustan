@@ -2,6 +2,7 @@
 {
     border: 0;
     margin: 0;
+    font-family: "Cinzel";
 }
 
 header 
@@ -10,7 +11,7 @@ header
     width: 100vw;
     background-color: black;
     display: grid;
-    grid-template-columns: 1%, 20%, 1fr, 1fr, 1fr, 1fr;
+    grid-template-columns: 8% 15% 1fr 1fr 1fr 10%;
     
     grid-template-areas: "logo textoLogo inicio cardapio pedidos userMenu";
         
@@ -39,8 +40,60 @@ header
         grid-area: userMenu;
     }
     
-}
+    #textoLogo
+    {
+        color: #D77F33;
+        font-size: 1.1em;
+        text-align: center;
+        align-content: center;
+    }
+    #menuInicio
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #menuCardapio
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #menuPedidos
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
-.divMenu {
-    border: solid red;
+    #menuInicio a
+    {
+        color: #D77F33;
+        text-decoration: none;
+        font-size: 1.3em;
+        font-weight: bold;
+    }
+
+    #menuCardapio a
+    {
+        color: #D77F33;
+        text-decoration: none;
+        font-size: 1.3em;
+        font-weight: bold;
+    }
+
+    #menuPedidos a
+    {
+        color: #D77F33;
+        text-decoration: none;
+        font-size: 1.3em;
+        font-weight: bold;
+    }
+
+    #userMenu
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
