@@ -3,6 +3,8 @@
     border: 0;
     margin: 0;
     font-family: "Cinzel";
+    background-color: black;
+    max-width: 100vw;
 }
 
 header 
@@ -96,4 +98,34 @@ header
         align-items: center;
         justify-content: center;
     }
+    
+    border-bottom: 20px solid rgb(92, 72, 20);
 }
+
+main
+{
+    #mainBackground
+    {
+        width: 100vw;   
+        height: 90vh;
+        background-image: url(images/background\ 1.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        p {
+            background-color: transparent;
+            color: #D77F33;
+        }
+
+        #DarLustan 
+        {
+            font-size: 4.5em;
+            font-weight: bold;
+        }
+        #textoArabe
+        {
+            
+        }
+    }
+} 
+
