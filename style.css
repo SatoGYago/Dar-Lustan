@@ -10,6 +10,7 @@
 body {
     --corTextoDourado: #D77F33;
     --barraDePesquisa: #573e0a;
+    overflow-x:hidden;
 }
 
 header 
@@ -109,10 +110,12 @@ header
 
 main
 {
+    height: 200vh;
     #mainBackground
     {
         width: 100vw;   
-        height: 90vh;
+        height: 82vh;
+        background-position: 2vh;
         background-image: url(images/background\ 1.png);
         background-repeat: no-repeat;
         background-size: cover;
@@ -122,15 +125,13 @@ main
             color: #D77F33;
         }
 
-        #DarLustan 
-        {
-            font-size: 4.5em;
-            font-weight: bold;
-        }
-        #textoArabe
-        {
-            
-        }
+    }
+    #linhaBaixo
+    {
+        width: 90vw;
+        height: 2px;
+        background-color: var(--corTextoDourado);
+        justify-self: center;
     }
 } 
 
@@ -184,4 +185,65 @@ main
    height: 55%;
    justify-self: center;
    margin-top: 5%;
+}
+
+#titulosMain
+{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    width: 25vw;
+    margin-top: 5vh;
+    margin-left: 5vw;
+    
+    #DarLustan 
+    {
+        font-size: 4.5em;
+        font-weight: bold;
+        margin-left: 5%;
+    }
+    
+    #TextoArabe
+    {
+        align-self: center;
+        font-size: 3em;
+    }
+}
+
+#paragrafoMain
+{
+    background-color: transparent;
+    width: 30vw;
+    position: absolute;
+    margin-top: 25vh;
+    margin-left: 5vw;
+    font-size: 1.3em;
+    #paragrafo 
+    {
+        color: white;
+        letter-spacing: 1px;
+    }
+}
+
+#maisPedidos
+{
+    width: 15vw;
+    height: 6vh;
+    background-color: var(--barraDePesquisa);
+    color: white;
+    border-radius: 15px;
+    justify-self: center;
+    margin: 5vh;
+    h1 
+    {
+        background-color: transparent;
+        justify-self: center;
+        align-content: center;
+    }
+}
+
+.itensMaisPedidos
+{
+    
 }
