@@ -7,6 +7,11 @@
     max-width: 100vw;
 }
 
+body {
+    --corTextoDourado: #D77F33;
+    --barraDePesquisa: #573e0a;
+}
+
 header 
 {
     height: 15vh;
@@ -129,3 +134,54 @@ main
     }
 } 
 
+#sectionPedidosTitulo {
+    width: 100%;
+    height: 80vh;
+    background-color: black;
+}
+
+#facaseupedido{
+    font-size: 4em;
+    color: var(--corTextoDourado);
+    justify-self: center;
+    padding-top: 2%;
+}
+
+#barraDePesquisa {
+    background-color: var(--barraDePesquisa);
+    margin-top: 1%;
+    width: 60%;
+    height: 3vh;
+    justify-self: center;
+    border-radius: 20px;
+}
+
+#search { 
+    width: 3%;
+    height: 100%;
+    cursor: pointer;
+    background-image: url(images/Search.png);
+    background-position: center;background-repeat: no-repeat;
+    background-color: transparent;
+    background-size: 60%;
+}
+
+#produtos01 {
+    width: 100%;
+    height: 35vh;
+    display: grid;
+    grid-template-columns: 15% 15% 15% 15%;
+    justify-content: center;
+    gap: 6%;
+    margin-top: 3%;
+    div { 
+        border: solid greenyellow;
+    }
+}
+
+.prodImg {
+   width: 80%;
+   height: 55%;
+   justify-self: center;
+   margin-top: 5%;
+}
