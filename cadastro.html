@@ -8,7 +8,7 @@
 </head>
 <body>
     <main>
-        <form action="cadastrar" method="post" id="FormularioCadastro">
+        <form action="cadastrar" method="post" id="formularioCadastro">
             <div id="inputNome">
                 <input type="text" name="NomeCompleto" id="nomeInput" placeholder="Nome completo">
             </div>
@@ -19,16 +19,18 @@
                 <input type="password" name="PasswordUsuario" id="PasswordInput" placeholder="Senha">
             </div>
             <div id="inputTelefone">
-                <input type="text" name="UserTelNumber" id="TelInput" placeholder="Número de telefone">
+                <input type="text" name="UserTelNumber" id="TelInput" placeholder="Número de telefone" oninput="MascaraTelefone()">
             </div>
             <div id="inputEndereco">
-                <input type="text" name="UserAdress" id="AdressInput">
+                <input type="text" name="UserAdress" id="AdressInput" placeholder="Endereço">
             </div>
             <div id="inputUserType">
                 <input type="radio" name="UserType" id="RadioUser" value="NormarUser"> Cliente
                 <input type="radio" name="UserType" id="RadioPartner" value="DeliveryPartner"> Entregador
             </div>
-            <div id="botaoCadastrar"><input type="button" value="Cadastrar"></div>
+            <div id="botaoCadastrar">
+                <button type="submit">Cadastrar</button>
+            </div>
         </form>
     </main>
 </body>
