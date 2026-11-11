@@ -19,19 +19,8 @@ function MascaraTelefone()
     });
 }
 
-const formulario = document.getElementById('formularioCadastro');
-
-formulario.addEventListener('submit', function (e) {
-  e.preventDefault();
-
-  const dados = {
-    NomeCompleto: document.getElementById('nomeInput').value,
-    EmailUsuario: document.getElementById('Emailinput').value,
-    PasswordUsuario: document.getElementById('PasswordInput').value,
-    UserTelNumber: document.getElementById('TelInput').value,
-    UserAdress: document.getElementById('AdressInput').value,
-    UserType: document.querySelector('input[name="UserType"]:checked')?.value
-  }
+function baixarJson(dados)
+{
   const jsonDados = JSON.stringify(dados, null, 2);
 
   const blob = new Blob([jsonDados], { type: 'application/json' });
@@ -43,4 +32,75 @@ formulario.addEventListener('submit', function (e) {
   link.remove();
 
   url.revokeObjectURL(url);
+}
+
+const formulario = document.getElementById('formularioCadastro');
+const inputDriverDados = document.getElementById('inputDriverDados');
+
+const userTypes = document.querySelectorAll('input[name="UserType"]');
+
+userTypes.forEach((radio) => {
+    radio.addEventListener('change', function () {
+
+        if (this.value === 'DeliveryPartner') {
+
+            inputDriverDados.innerHTML = `
+                <div id="inputVehicleType">
+                    <input
+                        type="text"
+                        name="VehicleType"
+                        id="VehicleInput"
+                        placeholder="Tipo de veículo"
+                        required
+                    >
+                </div>
+
+                <div id="inputVehiclePlate">
+                    <input
+                        type="text"
+                        name="VehiclePlate"
+                        id="PlateInput"
+                        placeholder="Placa do veículo"
+                        required
+                    >
+                </div>
+            `;
+
+        } else {
+            inputDriverDados.innerHTML = '';
+        }
+    });
+});
+
+
+
+formulario.addEventListener('submit', function (e) {
+  e.preventDefault();
+  const UserType = document.querySelector('input[name="UserType"]:checked')?.value;
+  if (UserType === 'DeliveryPartner') {
+    const dados = 
+    {
+      NomeCompleto: document.getElementById('nomeInput').value,
+      EmailUsuario: document.getElementById('Emailinput').value,
+      PasswordUsuario: document.getElementById('PasswordInput').value,
+      UserTelNumber: document.getElementById('TelInput').value,
+      UserAdress: document.getElementById('AdressInput').value,
+      UserType: UserType,
+      VehicleType: document.getElementById('VehicleInput').value,
+      VehiclePlate: document.getElementById('PlateInput').value
+    }
+    baixarJson(dados);
+  }
+  else {
+     const dados = {
+      NomeCompleto: document.getElementById('nomeInput').value,
+      EmailUsuario: document.getElementById('Emailinput').value,
+      PasswordUsuario: document.getElementById('PasswordInput').value,
+      UserTelNumber: document.getElementById('TelInput').value,
+      UserAdress: document.getElementById('AdressInput').value,
+      UserType: document.querySelector('input[name="UserType"]:checked')?.value
+    }
+
+    baixarJson(dados);
+}
 });
