@@ -115,7 +115,6 @@ main
     {
         width: 100vw;   
         height: 82vh;
-        background-position: 2vh;
         background-image: url(images/background\ 1.png);
         background-repeat: no-repeat;
         background-size: cover;
@@ -132,6 +131,7 @@ main
         height: 2px;
         background-color: var(--corTextoDourado);
         justify-self: center;
+        /*Não sei pq, se você abrir o site em um navegador FireFox essa parte não centraliza horizontalmente, mas no Chrome ta tudo certo, terei que perguntar ao professor como consertar isso, eu mesmo fui incapaz, não sei se o problema ta no meu firefox ou em qualquer um*/
     }
 } 
 
@@ -193,7 +193,7 @@ main
     display: flex;
     flex-direction: column;
     background-color: transparent;
-    width: 25vw;
+    width: 27vw;
     margin-top: 5vh;
     margin-left: 5vw;
     
@@ -209,20 +209,12 @@ main
         align-self: center;
         font-size: 3em;
     }
-}
 
-#paragrafoMain
-{
-    background-color: transparent;
-    width: 30vw;
-    position: absolute;
-    margin-top: 25vh;
-    margin-left: 5vw;
-    font-size: 1.3em;
-    #paragrafo 
+    #paragrafo
     {
         color: white;
-        letter-spacing: 1px;
+        margin-top: 5%;
+        font-size: 1.2em;
     }
 }
 
@@ -233,17 +225,126 @@ main
     background-color: var(--barraDePesquisa);
     color: white;
     border-radius: 15px;
-    justify-self: center;
     margin: 5vh;
-    h1 
+    justify-self: center;
+    h1 /*Não sei pq mas essa BOSTA não centraliza verticalmente no botão, tentar arrumar dps*/
     {
         background-color: transparent;
         justify-self: center;
-        align-content: center;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.7rem;
     }
 }
 
-.itensMaisPedidos
+#itensContainer
 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5%;
+    width: 90vw;
+    height: 60vh;
+    justify-self: center;
+
+    .itensMaisPedidos
+    {
+        display: grid;
+        grid-template-columns: 80%;
+        grid-template-rows: 45% 13% 13% 13%;
+        gap: 3%;
+        border: solid, var(--barraDePesquisa), 5px;
+        border-radius: 20px;
+        padding: 3%;
+        justify-content: center;
+    }
+
+    .maisPedidoImagem
+    {
+        width: 100%;
+        height: 100%;
+        border: solid, var(--barraDePesquisa), 1px;
+        border-radius: 10px;
+    }
+    .maisPedidoNome
+    {
+        width: 100%;
+        height: 100%;
+        border: solid, var(--barraDePesquisa), 1px;
+        border-radius: 10px;
+        color: white;
+        text-align: center;
+        justify-content: center;
+        align-content: center;
+    }
+    .maisPedidoPreco
+    {
+        width: 80%;
+        height: 100%;
+        border: solid, var(--barraDePesquisa), 1px;
+        border-radius: 10px;
+        color: white;
+        justify-self: center;
+        font-size: 1.9rem;
+        text-align: center;
+        justify-content: center;
+        align-content: center;
+    }
+    .botaoVerMais
+    {
+        width: 70%;
+        height: 100%;
+        border: solid, var(--barraDePesquisa), 1px;
+        border-radius: 10px;
+        color: white;
+        justify-self: center;
+        align-content: center;
+        background-color: var(--barraDePesquisa);   
+        font-family: Arial, Helvetica, sans-serif;
+        h1 
+        {
+            background-color: transparent;
+            justify-self: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.5rem;
+        }
+    }
+
+    #maisPedidoimg1
+    {
+        background-image: url(images/cardapio/combos/Rectangle\ 13.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    #maisPedidoimg2
+    {
+        background-image: url(images/cardapio/combos/Rectangle\ 18.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    #maisPedidoimg3
+    {
+        background-image: url(images/cardapio/combos/Rectangle\ 23.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+}
+
+#banner
+{
+    height: 70vh;
+    width: 90vw;
+    background-image: url(images/banner.png);
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    justify-self: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+footer
+{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     
 }
