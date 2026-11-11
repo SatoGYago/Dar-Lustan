@@ -299,6 +299,7 @@ main
         align-content: center;
         background-color: var(--barraDePesquisa);   
         font-family: Arial, Helvetica, sans-serif;
+        text-decoration: none;
         h1 
         {
             background-color: transparent;

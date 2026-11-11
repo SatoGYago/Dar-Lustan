@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar</title>
+    <link rel="stylesheet" href="SignIn.css">
+</head>
+<body>
+    <main>
+        <form action="cadastrar" method="post" id="FormularioCadastro">
+            <div id="inputNome">
+                <input type="text" name="NomeCompleto" id="nomeInput" placeholder="Nome completo">
+            </div>
+            <div id="inputEmail">
+                <input type="email" name="EmailUsuario" id="Emailinput" placeholder="Email">
+            </div>
+            <div id="inputSenha">
+                <input type="password" name="PasswordUsuario" id="PasswordInput" placeholder="Senha">
+            </div>
+            <div id="inputTelefone">
+                <input type="text" name="UserTelNumber" id="TelInput" placeholder="Número de telefone">
+            </div>
+            <div id="inputEndereco">
+                <input type="text" name="UserAdress" id="AdressInput">
+            </div>
+            <div id="inputUserType">
+                <input type="radio" name="UserType" id="RadioUser" value="NormarUser"> Cliente
+                <input type="radio" name="UserType" id="RadioPartner" value="DeliveryPartner"> Entregador
+            </div>
+            <div id="botaoCadastrar"><input type="button" value="Cadastrar"></div>
+        </form>
+    </main>
+</body>
+<script src="cadastro.js"></script>
+</html>
