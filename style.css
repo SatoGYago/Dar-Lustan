@@ -334,13 +334,13 @@ main
 #banner
 {
     height: 70vh;
-    width: 90vw;
+    width: 85vw;
     background-image: url(images/banner.png);
     margin-top: 5vh;
     margin-bottom: 5vh;
     justify-self: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: auto;
 }
 
 footer

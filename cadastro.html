@@ -9,20 +9,21 @@
 <body>
     <main>
         <form action="cadastrar" method="post" id="formularioCadastro">
+            <div id="darLustanLogo"></div>
             <div id="inputNome">
-                <input type="text" name="NomeCompleto" id="nomeInput" placeholder="Nome completo">
+                <input type="text" name="NomeCompleto" id="nomeInput" class="inputTexto" placeholder="Nome completo">
             </div>
             <div id="inputEmail">
-                <input type="email" name="EmailUsuario" id="Emailinput" placeholder="Email">
+                <input type="email" name="EmailUsuario" id="Emailinput" class="inputTexto" placeholder="Email">
             </div>
             <div id="inputSenha">
-                <input type="password" name="PasswordUsuario" id="PasswordInput" placeholder="Senha">
+                <input type="password" name="PasswordUsuario" id="PasswordInput" class="inputTexto" placeholder="Senha">
             </div>
             <div id="inputTelefone">
-                <input type="text" name="UserTelNumber" id="TelInput" placeholder="Número de telefone" oninput="MascaraTelefone()">
+                <input type="text" name="UserTelNumber" id="TelInput"  class="inputTexto"placeholder="Número de telefone" oninput="MascaraTelefone()">
             </div>
             <div id="inputEndereco">
-                <input type="text" name="UserAdress" id="AdressInput" placeholder="Endereço">
+                <input type="text" name="UserAdress" id="AdressInput" class="inputTexto" placeholder="Endereço">
             </div>
             <div id="inputUserType">
                 <input type="radio" name="UserType" id="RadioUser" value="NormarUser"> Cliente
