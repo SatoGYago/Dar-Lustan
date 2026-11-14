@@ -8,7 +8,7 @@
 }
 
 body {
-    --corTextoDourado: #D77F33;
+    --corTextoDourado: #d7ab33;
     --barraDePesquisa: #573e0a;
     overflow-x:hidden;
 }
@@ -167,24 +167,99 @@ main
     background-size: 60%;
 }
 
-#produtos01 {
+.produtos {
     width: 100%;
-    height: 35vh;
+    height: 45vh;
     display: grid;
-    grid-template-columns: 15% 15% 15% 15%;
+    grid-template-columns: 20% 20% 20% 20%;
     justify-content: center;
     gap: 6%;
     margin-top: 3%;
-    div { 
-        border: solid greenyellow;
-    }
 }
 
+.prod {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 4fr 1fr 1fr 1fr;
+    padding: 2%;
+    gap: 2%;
+    grid-template-areas: 
+    "imagem"
+    "nome"
+    "preco"
+    "forms";
+    border: solid var(--barraDePesquisa) 2px;
+    border-radius: 20px;
+}
+
+
+
 .prodImg {
-   width: 80%;
-   height: 55%;
-   justify-self: center;
-   margin-top: 5%;
+   grid-area: imagem;
+   border: solid var(--barraDePesquisa) 1px;
+   border-radius: 10px;
+}
+
+.NomeProd
+{
+    grid-area: nome;
+    color: white;
+    font-size: 1.6rem;
+    font-family: Arial, Helvetica, sans-serif;
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+}
+
+.precoProd
+{
+    grid-area: preco;
+    color: var(--corTextoDourado);
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    justify-self: center;
+    align-self: center;
+}   
+
+.precoProd::before
+{
+    content: "R$ ";
+    color: var(--corTextoDourado);
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.ProdForms
+{
+    grid-area: forms;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+
+    #ProdAdd
+    {
+        background-color: var(--barraDePesquisa);
+        color: white;
+        border-radius: 10px;
+        cursor: pointer;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.2rem;
+    }
+
+    #quantidade
+    {
+        border-radius: 10px;
+        text-align: center;
+        background-color: black;
+        color: var(--corTextoDourado)
+    }
+    #quantidade::placeholder
+    {
+        color: #c79b099d;
+        text-align: center;
+        font-size: 0.6rem;
+        text-transform: capitalize;
+    }
 }
 
 #titulosMain
@@ -348,4 +423,96 @@ footer
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     
+}
+
+#prodImg1
+{
+    background-image: url(images/cardapio/shawarma\ boi.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#prodImg2
+{
+    background-image: url(images/cardapio/shawarma\ frango.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 10%;
+}
+
+#prodImg3
+{
+    background-image: url(images/cardapio/esfiha\ carne.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#prodImg4
+{
+    background-image: url(images/cardapio/esfiha\ frango.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#prodImg5
+{
+    background-image: url(images/cardapio/esfiha\ queijo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#prodImg6
+{
+    background-image: url(images/cardapio/combos/Rectangle\ 13.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#prodImg7
+{
+    background-image: url(images/cardapio/combos/Rectangle\ 18.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#prodImg8
+{
+    background-image: url(images/cardapio/combos/Rectangle\ 23.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#prodImg9
+{
+    background-image: url(images/cardapio/kafta.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#prodImg10
+{
+    background-image: url(images/cardapio/kibbe\ mecatronico.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#prodImg11
+{
+    background-image: url(images/cardapio/beirute.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#prodImg12
+{
+    background-image: url(images/cardapio/combo\ esfihas.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }

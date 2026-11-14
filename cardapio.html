@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="carrinho.css">
 </head>
 <body>
     <header>
@@ -12,7 +13,7 @@
         <div class="divMenu" id="textoLogo"><h1>Dar Lustan</h1><h1>دار لوستان</h1></div>
         <div class="divMenu" class="menuItem" id="menuInicio"><a href="index.html">Inicio</a></div>
         <div class="divMenu" class="menuItem" id="menuCardapio"><a href="cardapio.html">Cardápio</a></div>
-        <div class="divMenu" class="menuItem" id="menuPedidos"><a href="pedidos.html">Pedidos</a></div>
+        <div class="divMenu" class="menuItem" id="menuPedidos"><a href="#carrinhoLateral" aria-haspopup="dialog">Pedidos</a></div>
         <div class="divMenu" id="userMenu"><a href=""><img src="images/User.png" alt=""></a></div>
     </header>
 
@@ -21,20 +22,140 @@
         <div id="barraDePesquisa">
             <button id="search"></button>
         </div>
-        <section id="produtos01">
-            <div class="prod">
-                <div class="prodImg"></div>
+        <section id="produtos01" class="produtos">
+            <div class="prod" data-item-id="1">
+                <div class="prodImg" id="prodImg1"></div>
+                <div class="NomeProd">Shawarma de Boi</div>
+                <div class="precoProd">38,99</div>
+                <div class="ProdForms">
+                    <button id="ProdAdd">Adicionar ao carrinho</button>
+                    <input type="number" name="quantidade" id="quantidade" min="1" max="10" defaultValue="1" placeholder="QUANTIDADE">
+                </div>
+
             </div>
-            <div class="prod">
-                <div class="prodImg"></div>
+            <div class="prod" data-item-id="2">
+                <div class="prodImg" id="prodImg2"></div>
+                <div class="NomeProd">Shawarma de Frango</div>
+                <div class="precoProd">34,99</div>
+                <div class="ProdForms">
+                    <button id="ProdAdd">Adicionar ao carrinho</button>
+                    <input type="number" name="quantidade" id="quantidade" min="1" max="10" defaultValue="1" placeholder="QUANTIDADE">
+                </div>
+                
             </div>
-            <div class="prod">
-                <div class="prodImg"></div>
+            <div class="prod" data-item-id="3">
+                <div class="prodImg" id="prodImg3"></div>
+                <div class="NomeProd">Esfirra de carne</div>
+                <div class="precoProd">12,99</div>
+                <div class="ProdForms">
+                    <button id="ProdAdd">Adicionar ao carrinho</button>
+                    <input type="number" name="quantidade" id="quantidade" min="1" max="10" defaultValue="1" placeholder="QUANTIDADE">
+                </div>
             </div>
-            <div class="prod">
-                <div class="prodImg"></div>
+            <div class="prod" data-item-id="4">
+                <div class="prodImg" id="prodImg4"></div>
+                <div class="NomeProd">Esfirra de frango</div>
+                <div class="precoProd">10,99</div>
+                <div class="ProdForms">
+                    <button id="ProdAdd">Adicionar ao carrinho</button>
+                    <input type="number" name="quantidade" id="quantidade" min="1" max="10" defaultValue="1" placeholder="QUANTIDADE">
+                </div>
+            </div>
+        </section>
+        <section id="produtos02" class="produtos">
+            <div class="prod" data-item-id="5">
+                <div class="prodImg" id="prodImg5"></div>
+                <div class="NomeProd">Esfirra de queijo</div>
+                <div class="precoProd">8,99</div>
+                <div class="ProdForms">
+                    <button id="ProdAdd">Adicionar ao carrinho</button>
+                    <input type="number" name="quantidade" id="quantidade" min="1" max="10" defaultValue="1" placeholder="QUANTIDADE">
+                </div>
+
+            </div>
+            <div class="prod" data-item-id="6">
+                <div class="prodImg" id="prodImg6"></div>
+                <div class="NomeProd">Combo Shawarma + fritas + refrigerante</div>
+                <div class="precoProd">45,99</div>
+                <div class="ProdForms">
+                    <button id="ProdAdd">Adicionar ao carrinho</button>
+                    <input type="number" name="quantidade" id="quantidade" min="1" max="10" defaultValue="1" placeholder="QUANTIDADE">
+                </div>
+                
+            </div>
+            <div class="prod" data-item-id="7">
+                <div class="prodImg" id="prodImg7"></div>
+                <div class="NomeProd">Combo 2 Shawarmas + fritas + refrigerante</div>
+                <div class="precoProd">75,99</div>
+                <div class="ProdForms">
+                    <button id="ProdAdd">Adicionar ao carrinho</button>
+                    <input type="number" name="quantidade" id="quantidade" min="1" max="10" defaultValue="1" placeholder="QUANTIDADE">
+                </div>
+            </div>
+            <div class="prod" data-item-id="8">
+                <div class="prodImg" id="prodImg8"></div>
+                <div class="NomeProd">Combo 3 Shawarmas + fritas</div>
+                <div class="precoProd">98,99</div>
+                <div class="ProdForms">
+                    <button id="ProdAdd">Adicionar ao carrinho</button>
+                    <input type="number" name="quantidade" id="quantidade" min="1" max="10" defaultValue="1" placeholder="QUANTIDADE">
+                </div>
+            </div>
+        </section>
+        <section id="produtos03" class="produtos">
+            <div class="prod" data-item-id="9">
+                <div class="prodImg" id="prodImg9"></div>
+                <div class="NomeProd">Kafta</div>
+                <div class="precoProd">25,99</div>
+                <div class="ProdForms">
+                    <button id="ProdAdd">Adicionar ao carrinho</button>
+                    <input type="number" name="quantidade" id="quantidade" min="1" max="10" defaultValue="1" placeholder="QUANTIDADE">
+                </div>
+
+            </div>
+            <div class="prod" data-item-id="10">
+                <div class="prodImg" id="prodImg10"></div>
+                <div class="NomeProd">Kibbeh</div>
+                <div class="precoProd">20,99</div>
+                <div class="ProdForms">
+                    <button id="ProdAdd">Adicionar ao carrinho</button>
+                    <input type="number" name="quantidade" id="quantidade" min="1" max="10" defaultValue="1" placeholder="QUANTIDADE">
+                </div>
+                
+            </div>
+            <div class="prod" data-item-id="11">
+                <div class="prodImg" id="prodImg11"></div>
+                <div class="NomeProd">Beirute</div>
+                <div class="precoProd">39,99</div>
+                <div class="ProdForms">
+                    <button id="ProdAdd">Adicionar ao carrinho</button>
+                    <input type="number" name="quantidade" id="quantidade" min="1" max="10" defaultValue="1" placeholder="QUANTIDADE">
+                </div>
+            </div>
+            <div class="prod" data-item-id="12">
+                <div class="prodImg" id="prodImg12"></div>
+                <div class="NomeProd">Combo 15 esfirras</div>
+                <div class="precoProd">49,99</div>
+                <div class="ProdForms">
+                    <button id="ProdAdd">Adicionar ao carrinho</button>
+                    <input type="number" name="quantidade" id="quantidade" min="1" max="10" defaultValue="1" placeholder="QUANTIDADE">
+                </div>
             </div>
         </section>
     </section>
+    <dialog id="carrinhoLateral" aria-labelledby="tituloCarrinho">
+        <div id="cabecalhoCarrinho">
+            <h2 id="tituloCarrinho">Meu pedido</h2>
+            <button type="button" id="fecharCarrinho" aria-label="Fechar carrinho">Fechar</button>
+        </div>
+        <div id="itensCarrinho"></div>
+        <div id="resumoCarrinho">
+            <p>Total: <strong id="totalCarrinho">R$ 0,00</strong></p>
+            <p id="mensagemCarrinho" role="status"></p>
+            <button type="button" id="finalizarPedido">Finalizar pedido</button>
+        </div>
+    </dialog>
+<script src="cadastro.js"></script>
+<script src="carrinho.js"></script>
 </body>
 </html>
