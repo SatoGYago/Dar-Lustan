@@ -75,10 +75,10 @@ if (formularioCadastro) {
     const entregador = document.getElementById('RadioPartner').checked;
     inputDriverDados.innerHTML = entregador ? `
       <div id="inputVehicleType">
-        <input type="text" name="VehicleType" id="VehicleInput" placeholder="Tipo de veículo" required>
+        <input type="text" name="VehicleType" id="VehicleInput" placeholder="Tipo de veículo" maxlength="255" required>
       </div>
       <div id="inputVehiclePlate">
-        <input type="text" name="VehiclePlate" id="PlateInput" placeholder="Placa do veículo" required>
+        <input type="text" name="VehicleNumber" id="PlateInput" placeholder="Placa do veículo" maxlength="20" required>
       </div>` : '';
   }
 
@@ -112,7 +112,10 @@ if (formularioCadastro) {
     };
     if (dados.UserType === 'DeliveryPartner') {
       dados.VehicleType = document.getElementById('VehicleInput').value.trim();
-      dados.VehiclePlate = document.getElementById('PlateInput').value.trim();
+      dados.VehicleNumber = document.getElementById('PlateInput').value.trim();
+      dados.Rating = 5;
+      dados.IsActive = true;
+      // O backend define UserID e o banco gera PartnerID automaticamente.
     }
     baixarJson(dados);
     // Esta cópia local permite testar o login antes da integração com o C#.

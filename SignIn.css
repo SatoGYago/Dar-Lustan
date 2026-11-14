@@ -62,7 +62,7 @@ main
 {
     border: solid var(--corTextoDourado) 7px;
     border-radius: 15px;
-    height: 60vh;
+    height: 65vh;
     width: 30vw;
     justify-content: center;
     align-content: center;
@@ -71,4 +71,26 @@ main
     justify-self: center;
     align-self: center;
     margin-top: 10%;
+}
+
+#VehicleInput
+{
+    color: white;
+    background-color: black;
+    border: solid var(--corTextoDourado) 3px;
+    border-radius: 15px;
+    margin-left: 25px;
+    width: 25vw;
+    height: 3vh;
+}
+
+#PlateInput
+{
+    color: white;
+    background-color: black;
+    border: solid var(--corTextoDourado) 3px;
+    border-radius: 15px;
+    margin-left: 25px;
+    width: 25vw;
+    height: 3vh;
 }
