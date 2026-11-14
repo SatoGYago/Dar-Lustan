@@ -94,3 +94,49 @@ main
     width: 25vw;
     height: 3vh;
 }
+
+/*RESPONSIVO: tudo daqui pra baixo so vale em tela de celular e tablet (ate 768px)*/
+@media (max-width: 768px)
+{
+    main
+    {
+        width: 85vw;
+        height: auto;
+        margin-top: 10vh;
+        padding: 3vh 10px;
+    }
+
+    #darLustanLogo
+    {
+        width: 100%;
+    }
+
+    .inputTexto
+    {
+        width: 90%;
+        margin: 10px 5%;
+        height: 6vh;
+    }
+
+    #VehicleInput
+    {
+        width: 90%;
+        margin: 10px 5%;
+        height: 6vh;
+    }
+
+    #PlateInput
+    {
+        width: 90%;
+        margin: 10px 5%;
+        height: 6vh;
+    }
+
+    button
+    {
+        width: 50%;
+        height: 6vh;
+        margin-left: 25%;
+        margin-top: 3vh;
+    }
+}

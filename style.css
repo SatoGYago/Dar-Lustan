@@ -516,3 +516,197 @@ footer
     background-repeat: no-repeat;
     background-position: center;
 }
+
+/*RESPONSIVO: tudo daqui pra baixo so vale em tela de celular e tablet (ate 768px)*/
+@media (max-width: 768px)
+{
+    header
+    {
+        height: auto;
+        grid-template-columns: 20% 1fr 20%;
+        grid-template-areas:
+        "logo textoLogo userMenu"
+        "inicio cardapio pedidos";
+        row-gap: 2vh;
+        padding: 2vh 0;
+
+        #logoImg
+        {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #logoImg img
+        {
+            width: 70%;
+        }
+        #textoLogo
+        {
+            font-size: 0.7em;
+        }
+        #menuInicio a
+        {
+            font-size: 1em;
+        }
+        #menuCardapio a
+        {
+            font-size: 1em;
+        }
+        #menuPedidos a
+        {
+            font-size: 1em;
+        }
+    }
+
+    main
+    {
+        height: auto;
+        #mainBackground
+        {
+            height: 70vh;
+            background-position: center;
+        }
+    }
+
+    #titulosMain
+    {
+        position: static;
+        width: 90vw;
+        margin-top: 0;
+        margin-left: 5vw;
+        padding-top: 5vh;
+
+        #DarLustan
+        {
+            font-size: 2.5em;
+            margin-left: 0;
+            align-self: center;
+        }
+        #TextoArabe
+        {
+            font-size: 2em;
+        }
+        #paragrafo
+        {
+            font-size: 1em;
+            text-align: center;
+        }
+    }
+
+    #maisPedidos
+    {
+        width: 60vw;
+        height: auto;
+        padding: 1vh 0;
+        h1
+        {
+            font-size: 1.4rem;
+        }
+    }
+
+    #itensContainer
+    {
+        grid-template-columns: 1fr;
+        height: auto;
+        gap: 4vh;
+
+        .itensMaisPedidos
+        {
+            height: 55vh;
+        }
+        .maisPedidoPreco
+        {
+            font-size: 1.5rem;
+        }
+        .botaoVerMais h1
+        {
+            font-size: 1.2rem;
+        }
+    }
+
+    #banner
+    {
+        width: 90vw;
+        height: 51vw;
+        background-size: contain;
+        background-position: center;
+    }
+
+    /*CARDAPIO*/
+    #sectionPedidosTitulo
+    {
+        height: auto;
+        padding-bottom: 5vh;
+    }
+
+    #facaseupedido
+    {
+        font-size: 2em;
+        text-align: center;
+    }
+
+    #barraDePesquisa
+    {
+        width: 90%;
+        height: 5vh;
+    }
+
+    #search
+    {
+        width: 12%;
+    }
+
+    .produtos
+    {
+        height: auto;
+        grid-template-columns: 45% 45%;
+        gap: 3vh 4vw;
+    }
+
+    .prod
+    {
+        height: 55vh;
+    }
+
+    .NomeProd
+    {
+        font-size: 1.1rem;
+    }
+
+    .precoProd
+    {
+        font-size: 1.1rem;
+    }
+
+    .precoProd::before
+    {
+        font-size: 1.1rem;
+    }
+
+    .ProdForms
+    {
+        #ProdAdd
+        {
+            font-size: 0.9rem;
+        }
+    }
+}
+
+/*so celular (ate 480px), aqui os produtos ficam um embaixo do outro*/
+@media (max-width: 480px)
+{
+    .produtos
+    {
+        grid-template-columns: 90%;
+    }
+
+    .prod
+    {
+        height: 65vh;
+    }
+
+    .NomeProd
+    {
+        font-size: 1.3rem;
+    }
+}
