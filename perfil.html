@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Perfil | Dar Lustan</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="carrinho.css">
+    <link rel="stylesheet" href="perfil.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="tema.css">
+    <script src="tema.js"></script>
+</head>
+<body>
+    <header>
+        <div class="divMenu" id="logoImg"><img src="images/DarLustanLogo.png" alt=""></div>
+        <div class="divMenu" id="textoLogo"><h1>Dar Lustan</h1><h1>دار لوستان</h1></div>
+        <div class="divMenu" class="menuItem" id="menuInicio"><a href="index.html">Inicio</a></div>
+        <div class="divMenu" class="menuItem" id="menuCardapio"><a href="cardapio.html">Cardápio</a></div>
+        <div class="divMenu" class="menuItem" id="menuPedidos"><a href="#carrinhoLateral" aria-haspopup="dialog">Pedidos</a></div>
+        <div class="divMenu" id="userMenu"><a href=""><img src="images/User.png" alt=""></a></div>
+    </header>
+
+    <section id="sectionPerfil">
+        <p id="tituloPerfil">Meu Perfil</p>
+
+        <div class="cardPerfil" id="cardDados">
+            <h2>Meus dados</h2>
+            <div class="dadoPerfil"><span class="nomeDado">Nome</span><span class="valorDado" id="perfilNome"></span></div>
+            <div class="dadoPerfil"><span class="nomeDado">E-mail</span><span class="valorDado" id="perfilEmail"></span></div>
+            <div class="dadoPerfil"><span class="nomeDado">Telefone</span><span class="valorDado" id="perfilTelefone"></span></div>
+            <div class="dadoPerfil"><span class="nomeDado">Endereço</span><span class="valorDado" id="perfilEndereco"></span></div>
+            <div class="dadoPerfil"><span class="nomeDado">Tipo de conta</span><span class="valorDado" id="perfilTipo"></span></div>
+            <div id="dadosEntregador" hidden>
+                <div class="dadoPerfil"><span class="nomeDado">Veículo</span><span class="valorDado" id="perfilVeiculo"></span></div>
+                <div class="dadoPerfil"><span class="nomeDado">Placa</span><span class="valorDado" id="perfilPlaca"></span></div>
+            </div>
+        </div>
+
+        <div class="cardPerfil" id="cardPedidos">
+            <h2>Meus pedidos</h2>
+            <div id="listaPedidos"></div>
+        </div>
+
+        <button type="button" id="botaoSairPerfil">Sair da conta</button>
+    </section>
+
+    <dialog id="carrinhoLateral" aria-labelledby="tituloCarrinho">
+        <div id="cabecalhoCarrinho">
+            <h2 id="tituloCarrinho">Meu pedido</h2>
+            <button type="button" id="fecharCarrinho" aria-label="Fechar carrinho">Fechar</button>
+        </div>
+        <div id="itensCarrinho"></div>
+        <div id="resumoCarrinho">
+            <p>Total: <strong id="totalCarrinho">R$ 0,00</strong></p>
+            <p id="mensagemCarrinho" role="status"></p>
+            <button type="button" id="finalizarPedido">Finalizar pedido</button>
+        </div>
+    </dialog>
+    <button type="button" id="botaoTema"></button>
+<script src="cadastro.js"></script>
+<script src="carrinho.js"></script>
+<script src="perfil.js"></script>
+</body>
+</html>

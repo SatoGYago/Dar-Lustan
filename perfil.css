@@ -1,0 +1,138 @@
+/*Pagina de perfil do usuario, o topo (header) vem do style.css*/
+#sectionPerfil
+{
+    width: 60vw;
+    margin: 0 auto;
+    padding: 5vh 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4vh;
+}
+
+#tituloPerfil
+{
+    font-size: 4em;
+    color: var(--corTextoDourado);
+    text-align: center;
+}
+
+.cardPerfil
+{
+    border: solid var(--barraDePesquisa) 2px;
+    border-radius: 20px;
+    padding: 3vh 3vw;
+
+    h2
+    {
+        color: #D77F33;
+        font-size: 1.8em;
+        margin-bottom: 2vh;
+    }
+}
+
+.dadoPerfil
+{
+    display: grid;
+    grid-template-columns: 30% 1fr;
+    gap: 2%;
+    padding: 1.5vh 0;
+    border-bottom: solid var(--barraDePesquisa) 1px;
+
+    .nomeDado
+    {
+        color: var(--corTextoDourado);
+        font-weight: bold;
+    }
+
+    .valorDado
+    {
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        overflow-wrap: anywhere;
+    }
+}
+
+#listaPedidos
+{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.pedidoPerfil
+{
+    border: solid var(--barraDePesquisa) 1px;
+    border-radius: 10px;
+    padding: 2vh 2vw;
+    margin-bottom: 2vh;
+
+    p, li
+    {
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+    }
+
+    .dataPedidoPerfil
+    {
+        color: var(--corTextoDourado);
+        font-weight: bold;
+        margin-bottom: 1vh;
+    }
+
+    ul
+    {
+        padding-left: 20px;
+    }
+
+    .totalPedidoPerfil
+    {
+        color: var(--corTextoDourado);
+        font-weight: bold;
+        margin-top: 1vh;
+    }
+}
+
+#botaoSairPerfil
+{
+    width: 30%;
+    height: 6vh;
+    align-self: center;
+    background-color: var(--barraDePesquisa);
+    color: white;
+    border-radius: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+/*RESPONSIVO: tudo daqui pra baixo so vale em tela de celular e tablet (ate 768px)*/
+@media (max-width: 768px)
+{
+    #sectionPerfil
+    {
+        width: 90vw;
+    }
+
+    #tituloPerfil
+    {
+        font-size: 2em;
+    }
+
+    .cardPerfil
+    {
+        padding: 2vh 4vw;
+        h2
+        {
+            font-size: 1.3em;
+        }
+    }
+
+    .dadoPerfil
+    {
+        grid-template-columns: 1fr;
+    }
+
+    #botaoSairPerfil
+    {
+        width: 60%;
+    }
+}

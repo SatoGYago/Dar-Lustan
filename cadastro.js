@@ -162,11 +162,15 @@ if (formularioLogin) {
 
 const userMenu = document.getElementById('userMenu');
 if (userMenu) {
+  // Logado vai para o perfil, sem login vai para a tela de login.
+  function paginaUsuario() {
+    return obterUsuarioLogado() ? 'perfil.html' : 'login.html';
+  }
   const link = userMenu.querySelector('a');
-  if (link) link.href = 'login.html';
+  if (link) link.href = paginaUsuario();
   userMenu.addEventListener('click', function (evento) {
     evento.preventDefault();
-    window.location.href = 'login.html';
+    window.location.href = paginaUsuario();
   });
 }
 

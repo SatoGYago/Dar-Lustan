@@ -196,6 +196,19 @@ function finalizarPedido()
     link.remove();
     setTimeout(function () { URL.revokeObjectURL(url); }, 1000);
 
+    // Guarda uma cópia do pedido, com o nome dos itens, para aparecer em "Meus pedidos" no perfil.
+    const historico = lerDados('darLustanPedidos', []);
+    const pedidosSalvos = Array.isArray(historico) ? historico : [];
+    pedidosSalvos.push({
+        EmailUsuario: pedido.EmailUsuario,
+        DataPedido: pedido.DataPedido,
+        Itens: itens.map(function (item) {
+            return { Nome: item.Nome, Quantidade: item.Quantidade };
+        }),
+        Total: pedido.Total
+    });
+    salvarDados('darLustanPedidos', pedidosSalvos);
+
     if (salvarCarrinho([])) {
         atualizarCarrinho();
         mensagemCarrinho.textContent = 'Download de pedido.json solicitado!';
