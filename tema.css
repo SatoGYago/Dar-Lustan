@@ -1,0 +1,168 @@
+/*Botao redondo que troca o tema, fica no canto de baixo em todas as paginas*/
+#botaoTema
+{
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 10;
+    width: 55px;
+    height: 55px;
+    margin: 0;
+    padding: 0;
+    border: solid #D77F33 2px;
+    border-radius: 50%;
+    background-color: #573e0a;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+/*MODO CLARO: tudo daqui pra baixo so vale quando o html tem a classe modoClaro (quem coloca e o tema.js)*/
+html.modoClaro
+{
+    background-color: #f5ecd7;
+
+    *
+    {
+        background-color: #f5ecd7;
+    }
+
+    body
+    {
+        --corTextoDourado: #8a6410;
+        color: #3b2a10;
+    }
+
+    :focus-visible
+    {
+        outline-color: #3b2a10;
+    }
+
+    /*TOPO*/
+    header #textoLogo
+    {
+        color: #a8561a;
+    }
+    header #menuInicio a
+    {
+        color: #a8561a;
+    }
+    header #menuCardapio a
+    {
+        color: #a8561a;
+    }
+    header #menuPedidos a
+    {
+        color: #a8561a;
+    }
+
+    /*INICIO*/
+    #itensContainer .maisPedidoNome
+    {
+        color: #3b2a10;
+    }
+    #itensContainer .maisPedidoPreco
+    {
+        color: #3b2a10;
+    }
+
+    /*CARDAPIO*/
+    #sectionPedidosTitulo
+    {
+        background-color: #f5ecd7;
+    }
+    .NomeProd
+    {
+        color: #3b2a10;
+    }
+    .ProdForms #quantidade
+    {
+        background-color: #fbf6ea;
+    }
+
+    /*CARRINHO*/
+    #carrinhoLateral
+    {
+        background-color: #f5ecd7;
+        color: #3b2a10;
+    }
+    #cabecalhoCarrinho
+    {
+        color: #a8561a;
+    }
+    #carrinhoLateral input
+    {
+        color: #3b2a10;
+    }
+    #carrinhoLateral button
+    {
+        color: #3b2a10;
+    }
+    #carrinhoLateral button:hover
+    {
+        color: white;
+    }
+    #carrinhoLateral #finalizarPedido
+    {
+        color: white;
+    }
+
+    /*PERFIL*/
+    .cardPerfil h2
+    {
+        color: #a8561a;
+    }
+    .dadoPerfil .valorDado
+    {
+        color: #3b2a10;
+    }
+    #listaPedidos
+    {
+        color: #3b2a10;
+    }
+    .pedidoPerfil p, .pedidoPerfil li
+    {
+        color: #3b2a10;
+    }
+    .pedidoPerfil .dataPedidoPerfil
+    {
+        color: var(--corTextoDourado);
+    }
+    .pedidoPerfil .totalPedidoPerfil
+    {
+        color: var(--corTextoDourado);
+    }
+
+    /*LOGIN E CADASTRO*/
+    #formularioLogin h1, #contaLogada h1
+    {
+        color: #a8561a;
+    }
+    input
+    {
+        color: #3b2a10;
+    }
+    #VehicleInput
+    {
+        color: #3b2a10;
+        background-color: #f5ecd7;
+    }
+    #PlateInput
+    {
+        color: #3b2a10;
+        background-color: #f5ecd7;
+    }
+    #formularioLogin a, #contaLogada a, .voltar
+    {
+        color: #a8561a;
+    }
+    #formularioLogin button:hover, #contaLogada button:hover
+    {
+        background-color: #ecdcb8;
+    }
+    #mensagemLogin
+    {
+        color: #b3261e;
+    }
+}
